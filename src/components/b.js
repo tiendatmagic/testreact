@@ -6,11 +6,14 @@ export default class B extends Component {
     super(props);
     this.state = {
       count: 0,
+      name: 'Dat',
+
     };
   }
 
   HandleClick = () => {
     this.setState({ count: this.state.count + 1 });
+    this.setState({ name: 'Minh' });
   }
 
 
@@ -18,7 +21,8 @@ export default class B extends Component {
     return (
       <div>
 
-        <p>You click: {this.state.count}</p>
+        <p>You click: {this.state.name}</p>
+        <p>{JSON.stringify(this.state.user)}</p>
         <br />
         <button onClick={this.HandleClick} style={{ padding: '10px 20px' }}>OK</button>
 
